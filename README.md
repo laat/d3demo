@@ -7,6 +7,8 @@ d3 stupid simple map demo
 * [Kartet](http://commons.wikimedia.org/wiki/File:Norway_municipalities_2012_blank.svg)
 * [Kommune Data](https://no.wikipedia.org/wiki/Norges_kommuner#Kommunene)
 
+[scale](http://www.wolframalpha.com/input/?i=x%5E0.2+from+100+to+600000)
+
 
 D3 examples:
 * [pie](http://bl.ocks.org/mbostock/3887235)

@@ -16,7 +16,7 @@
 		});
 	};
 	var fargelegg = function(data){
-		var colors=d3.scale.linear()
+		var colors=d3.scale.pow().exponent(0.2)
 			.domain([0, 600000])
 			.range(["yellow","red"]);
 
