@@ -15,5 +15,11 @@
 			});
 		});
 	};
-	loadKartAndData("kart", "body", function(data){console.log(data)});
+	var fargelegg = function(data){
+		data.forEach(function(kommune) {
+			$("#"+kommune.KommuneNr).css("fill", "red");
+		});
+	};
+
+	loadKartAndData("kart", "body", fargelegg);
 })();
