@@ -16,8 +16,12 @@
 		});
 	};
 	var fargelegg = function(data){
+		var colors=d3.scale.linear()
+			.domain([0, 600000])
+			.range(["yellow","red"]);
+
 		data.forEach(function(kommune) {
-			$("#"+kommune.KommuneNr).css("fill", "red");
+			$("#"+kommune.KommuneNr).css("fill", colors(kommune.Innbyggere));
 		});
 	};
 
