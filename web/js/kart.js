@@ -1,5 +1,5 @@
 (function() {
-	var loadKart = function(asId, toElement){
+	var loadKartAndData = function(asId, toElement, callback){
 		d3.xml("resources/norway.svg", "image/svg+xml", function(xml){
 			var img = $(xml.documentElement);
 			img.attr("id", asId);
@@ -9,7 +9,11 @@
 			img.attr("width","500");
 			img.attr("height","700");
 			$(toElement).append(img)
+
+			d3.csv("resources/kommuner.t.csv", function(csv){
+				callback(csv);
+			});
 		});
 	};
-	loadKart("kart", "body");
+	loadKartAndData("kart", "body", function(data){console.log(data)});
 })();
